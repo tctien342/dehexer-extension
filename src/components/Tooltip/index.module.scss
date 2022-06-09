@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.9);
+    background: rgba(255, 255, 255, 0.8);
+  }
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.tooltip {
+  position: relative;
+
+  .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #1e1e21;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -40px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    transform: scale(0.5);
+    transition: all 0.1s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #1e1e21 transparent transparent transparent;
+    }
+  }
+  &:hover .tooltiptext {
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+.pop {
+  * {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+  }
+  .white {
+    color: white;
+  }
+  .green {
+    color: rgb(134, 239, 172);
+  }
+  .text {
+    padding-left: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 320px;
+  }
+}
